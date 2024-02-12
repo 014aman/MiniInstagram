@@ -1,0 +1,48 @@
+<%- include("navbar") -%>
+
+<style>
+img{
+  width: 270px;
+        height: 320px;
+}
+  .card-container{
+    display: flex; 
+    flex-wrap: wrap; 
+     gap: 70px; 
+     padding: 20px;
+     justify-content: center;
+  }
+  .card{
+    width: 300px;
+        height: 400px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+        background-color:  rgb(228, 240, 240);
+        margin-right: 15px;
+        
+        
+  }
+  .card-body{
+    padding: 20px;
+    justify-content: center;
+  }
+  </style>
+    <h1>You are Logged in as <%= user.name%></h1>
+    <% if (user && user.photos && user.photos.length > 0) { %>
+    <h2 class="bodyHeading">Existing Photos</h2>
+    <div class="card-container">
+      <% user.photos.forEach(photo => { %>
+      <div class="card">
+        <div class="card-body">
+            <img src="/uploads/<%= photo.filename %>" />
+            <h3><%= photo.caption %></h3>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+      
+    <% } else{%>
+      No photo uploaded.
+    <% } %>
+
+  </body>
+</html>

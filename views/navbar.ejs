@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlinkitGram</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <nav>
+      <div class="leftElement">
+        <h2 onclick="window.location.href = '/'">BlinkitGram</h2>
+      </div>
+      <div clast="rightElement">
+        <% if(!user) { if(page === 'login') {%>
+        <h2 id="signup" onclick="window.location.href = '/signup'">Sign Up</h2>
+        <% } else {%>
+        <h2 id="signup" onclick="window.location.href = '/login'">Login</h2>
+
+        <% }%> <% }else{ %>
+        <h2 id="profile" onclick="window.location.href = '/uploadPhoto'">
+          Upload Photo
+        </h2>
+
+        <h2 id="logout" onclick="window.location.href = '/logout'">Logout</h2>
+        <% } %>
+      </div>
+    </nav>
+  
+

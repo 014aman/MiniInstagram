@@ -1,0 +1,17 @@
+<%- include("navbar") -%>
+
+<link rel="stylesheet" href="/css/forms.css" />
+<form method="post" action="/login">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required />
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required />
+
+  <input type="submit" value="Login" style="margin-left: 35%; margin-top: 6%" />
+
+  <div class="error">
+    <p style="color: red; font-style: italic; margin-left: 29%"><%= msg %></p>
+    <!-- Display error message here if login is unsuccessful -->
+  </div>
+</form>

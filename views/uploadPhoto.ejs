@@ -1,0 +1,20 @@
+<%- include("navbar") -%>
+
+<link rel="stylesheet" href="/css/forms.css" />
+
+<form method="post" action="/uploadPhoto" enctype="multipart/form-data">
+  <label for="imageUpload">Select an image:</label><br />
+  <input
+    type="file"
+    id="imageUpload"
+    name="imageUpload"
+    accept="image/*"
+    required
+  /><br />
+
+  <label for="caption">Caption:</label><br />
+  <input type="text" id="caption" name="caption" required /><br />
+
+  <input type="submit" value="Uplaod Photo" />
+</form>
+<!-- Table to display existing videos -->
