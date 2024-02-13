@@ -61,7 +61,6 @@ app.post("/signup", async (req, res) => {
 
   try {
     // Check if the username already exists
-
     const existingUser = await userData.findOne({ username });
     if (existingUser) {
       return res.render("signUpPage", {
