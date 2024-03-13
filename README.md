@@ -1,4 +1,4 @@
-# BlinkitGram
+# MiniInstagram
 
 The application is deployed (But it will take 50sec for loading first time, as I have utilised free service of Render.com) :- https://mininstagram.onrender.com/
 You can use :- username :- demouser , password :- demopass
